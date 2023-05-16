@@ -20,6 +20,18 @@ body {
 /* ********transition screen******** */
 #transitionScreen {
     display: none;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+#transitionBg {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    transition: background-color 10s;
+    transition: background-color 10s;
+    position: absolute;
 }
 /* ********button screen******** */
 #buttonScreen {

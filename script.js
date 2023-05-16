@@ -20,3 +20,27 @@ function buttonBgChange()
     }
 }
 let mwahInterval = setInterval(buttonBgChange, 800);
+
+let playButton = document.querySelector("#buttonCircle");
+let buttonScreen = document.querySelector("#buttonScreen");
+let catScreen = document.querySelector("#catScreen");
+let transitionScreen = document.querySelector("#transitionScreen");
+let transitionBg = document.querySelector("#transitionBg");
+
+function fadeAnimationTransition()
+{
+    transitionBg.style.backgroundColor = "rgba(255, 255, 255, 0)";
+    console.log("helo");
+}
+
+function showWhiteTransition()
+{
+    setTimeout(fadeAnimationTransition, 3000);
+}
+
+playButton.addEventListener("click", () => {
+    clearInterval(mwahInterval);
+    buttonScreen.style.display = "none";
+    catScreen.style.display = "flex";
+    showWhiteTransition();
+});
