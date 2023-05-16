@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/* ********cat screen******** */
+#catScreen {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#catScreen img {
+    height: 100vh;
+    width: 100vw;
+}
+/* ********hearts screen******** */
+#screenFilledWithHearts {
+    display: none;
+}
+/* ********transition screen******** */
+#transitionScreen {
+    display: none;
+}
+/* ********button screen******** */
+#buttonScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png); */
+    /* background-image: url(./images/mwah\(hollow\).png); */
+    /* background-repeat: repeat; */
+    /* background-size: 15%; */
+}
+#transparentBg {
+    /* background-color: #eeb9ffd6; */
+    background-color: #925ecbd6;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+#buttonBg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #eeb9ff; */
+    background-color: #eeb9ffd6;
+    /* width: 75vw; */
+    width: 100vw;
+    /* height: 75vh; */
+    height: 100vh;
+    /* border-radius: 25px; */
+    /* background-image: url(./images/mwah\(hollow_bold\).png); */
+    background-image: url(./images/mwah\(combined\)\ bold.png);
+    background-repeat: repeat;
+    /* background-size: 287px; */
+    background-size: 280px;
+    /* background-size: 400px; */
+    background-position: center;
+}
+#buttonCircle {
+    margin: 25% auto;
+    width: 10em;
+    height: 10em;
+    background-color: #efdaff;
+    cursor: pointer;
+    border-radius: 55%;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 #e5d1ff;
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px #e5d1ff;
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 #e5d1ff;
+	}
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(229, 209, 255, 0.8);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(229, 209, 255, 0.8);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(229, 209, 255, 0.8);
+	}
+}
+
+#buttonCircle:active {
+    background-color: #e5d1ff;
+}
+#buttonTriangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
