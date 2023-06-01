@@ -7,32 +7,105 @@ body {
 #catScreen {
     display: none;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center;
+    background: rgb(239,203,242);
+    background: -moz-radial-gradient(circle, rgba(239,203,242,0) 50%, rgba(255,200,244,1) 90%);
+    background: -webkit-radial-gradient(circle, rgba(239,203,242,0) 50%, rgba(255,200,244,1) 90%);
+    background: radial-gradient(circle, rgba(239,203,242,0) 50%, rgba(255,200,244,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efcbf2",endColorstr="#ffc8f4",GradientType=1); */
+    background-color: #925ecbd6;
 }
-#catScreen img {
+#cat {
+    width: min(100vw, 1000px);
     height: 100vh;
-    width: 100vw;
-}
-/* ********hearts screen******** */
-#screenFilledWithHearts {
-    display: none;
-}
-/* ********transition screen******** */
-#transitionScreen {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    /* width: 100vw; */
-    /* height: 100vh; */
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 #transitionBg {
     background-color: white;
     width: 100vw;
     height: 100vh;
     transition: background-color 10s;
-    transition: background-color 10s;
     position: absolute;
 }
+#screenFilledWithHearts1 {
+    /* background-color: white; */
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/bg\(v3\).png);
+    /* transition: background-position 800ms; */
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: 51% -731%;
+    /* background-position: 65% -12%; */
+    /* animation: heartsTransition1 800ms; */
+    animation-name: heartsTransition1;
+    animation-duration: 800ms;  
+    animation-fill-mode: forwards;
+    animation-delay: .1s;
+}
+#screenFilledWithHearts2 {
+    /* background-color: white; */
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/bg\(v3\).png);
+    /* transition: background-position 800ms; */
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    /* background-position: 34% -731%; */
+    /* background-position: 34% 0%; */
+    /* animation: heartsTransition2 800ms; */
+    animation-name: heartsTransition2;
+    animation-duration: 800ms;  
+    animation-fill-mode: forwards;
+}
+#pinkGradient {
+    background-color: #925ecbd6;
+    background-color: #ad57e3cc;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgb(172,76,233);
+    background: -moz-radial-gradient(circle, rgba(172,76,233,0) 37%, rgb(226 149 245) 70%);
+    background: -webkit-radial-gradient(circle, rgba(172,76,233,0) 37%, rgb(226 149 245) 70%);
+    background: radial-gradient(circle, rgba(172,76,233,0) 37%, rgb(226 149 245) 70%);
+    /* background: radial-gradient(circle, rgba(172,76,233,0) 37%, rgb(149, 245, 192) 70%); */
+    /* background: radial-gradient(circle, rgb(213 102 239 / 8%) 41%, rgb(221 149 245) 67%); */
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ac4ce9",endColorstr="#ac4ce9",GradientType=1); */
+    animation: animatedGradient 3s ease infinite;
+    transition: background-size 3s;
+}
+/*  */
+#catBg {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* background-color: #eeb9ff; */
+    background-color: #eeb9ffd6;
+    /* width: 75vw; */
+    width: 100vw;
+    /* height: 75vh; */
+    height: 100vh;
+    /* border-radius: 25px; */
+    /* background-image: url(./images/mwah\(hollow_bold\).png); */
+    background-image: url(./images/blackHeart.png);
+    background-repeat: repeat;
+    /* background-size: 287px; */
+    /* background-size: 280px; */
+    /* background-size: 400px; */
+    /* background-position: center; */
+    background-size: 274px;
+    background-position: 0 -8%;
+    animation: animatedBackground 3s linear infinite alternate;
+    filter: blur(3px);
+}
+/* ********hearts screen******** */
 /* ********button screen******** */
 #buttonScreen {
     display: flex;
@@ -45,9 +118,10 @@ body {
     /* background-repeat: repeat; */
     /* background-size: 15%; */
 }
-#transparentBg {
+.transparentBg {
     /* background-color: #eeb9ffd6; */
     background-color: #925ecbd6;
+    background-color: #ad57e3cc;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -80,7 +154,7 @@ body {
     border-radius: 55%;
     animation: pulse 2s infinite;
 }
-@keyframes pulse {
+/* @keyframes pulse {
 	0% {
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 #e5d1ff;
@@ -95,7 +169,7 @@ body {
 		transform: scale(0.95);
 		box-shadow: 0 0 0 0 #e5d1ff;
 	}
-}
+} */
 @keyframes pulse {
 	0% {
 		transform: scale(0.95);
@@ -112,7 +186,50 @@ body {
 		box-shadow: 0 0 0 0 rgba(229, 209, 255, 0.8);
 	}
 }
-
+@keyframes animatedBackground {
+    from {
+      background-position: 0 -8;
+    }
+    to {
+      background-position: 0 -10%;
+    }
+}
+@keyframes animatedGradient {
+    0% {
+		/* transform: scale(0.95); */
+		/* box-shadow: 0 0 0 0 rgba(229, 209, 255, 0.8); */
+        /* background: radial-gradient(circle, rgba(172,76,233,0) 37%, rgb(226 149 245) 70%); */
+        background-position: 37% 70%;
+	}
+	70% {
+		/* transform: scale(0.95); */
+		/* box-shadow: 0 0 0 0 rgba(229, 209, 255, 0.8); */
+        /* background: radial-gradient(circle, rgba(172,76,233,0) 33%, rgb(226 149 245) 60%); */
+        background-position: 33% 60%;
+	}
+    100% {
+		/* transform: scale(0.95); */
+		/* box-shadow: 0 0 0 0 rgba(229, 209, 255, 0.8); */
+        /* background: radial-gradient(circle, rgba(172,76,233,0) 37%, rgb(226 149 245) 70%); */
+        background-position: 37% 70%;
+	}
+}
+@keyframes heartsTransition1 {
+    from {
+        background-position: 51% -731%;
+    }
+    to {
+        background-position: 51% 25%;
+    }
+}
+@keyframes heartsTransition2 {
+    from {
+        background-position: 34% -731%;
+    }
+    to {
+        background-position: 34% 0%;
+    }
+}
 #buttonCircle:active {
     background-color: #e5d1ff;
 }
@@ -121,3 +238,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* hey, here's what's left
+1) pulse to pinkGradient
+2) heart transition */
