@@ -26,8 +26,25 @@ let buttonScreen = document.querySelector("#buttonScreen");
 let catScreen = document.querySelector("#catScreen");
 let transitionScreen = document.querySelector("#transitionScreen");
 let transitionBg = document.querySelector("#transitionBg");
+let screenFilledWithHearts = document.querySelector("#screenFilledWithHearts");
+let screenFilledWithHearts1 = document.querySelector("#screenFilledWithHearts1");
+let screenFilledWithHearts2 = document.querySelector("#screenFilledWithHearts2");
+let whiteBgForHearts = document.querySelector("#whiteBgForHearts");
+let heartContainer = document.querySelector("#container");
 
-function fadeAnimationTransition()
+function fadeAnimationTransitionFromHeartScreen()
+{
+    whiteBgForHearts.style.display = "block";
+    whiteBgForHearts.style.animationName = "whiteTransitionFromHearts";
+}
+
+function playHeartAnimation()
+{
+    heartContainer.style.display = "block";
+    setTimeout(fadeAnimationTransitionFromHeartScreen, 3000);
+}
+
+function fadeAnimationTransitionToCatScreen()
 {
     transitionBg.style.backgroundColor = "rgba(255, 255, 255, 0)";
     console.log("helo");
@@ -35,12 +52,33 @@ function fadeAnimationTransition()
 
 function showWhiteTransition()
 {
-    setTimeout(fadeAnimationTransition, 3000);
+    setTimeout(fadeAnimationTransitionToCatScreen, 3000);
+}
+
+function showCatScreen()
+{
+    buttonScreen.style.display = "none";
+    screenFilledWithHearts.style.display = "none"
+    catScreen.style.display = "flex";
+    showWhiteTransition();
+}
+
+function showHeartTransition()
+{
+    screenFilledWithHearts.style.display = "block";
+    // setTimeout(hideHeartTransition, 3000);
+    setTimeout(playHeartAnimation, 500);
+}
+function hideHeartTransition()
+{
+    screenFilledWithHearts.style.display = "none";
 }
 
 playButton.addEventListener("click", () => {
     clearInterval(mwahInterval);
-    buttonScreen.style.display = "none";
-    catScreen.style.display = "flex";
-    showWhiteTransition();
+    showHeartTransition();
+    setTimeout(showCatScreen, 5000);
+    // buttonScreen.style.display = "none";
+    // catScreen.style.display = "flex";
+    // showWhiteTransition();
 });
