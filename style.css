@@ -80,6 +80,7 @@ body {
     animation-duration: 800ms;  
     animation-fill-mode: forwards;
     animation-delay: .1s;
+    filter: blur(3px);
 }
 #screenFilledWithHearts2 {
     width: 100vw;
@@ -91,6 +92,7 @@ body {
     animation-name: heartsTransition2;
     animation-duration: 800ms;  
     animation-fill-mode: forwards;
+    filter: blur(2px);
 }
 #whiteBgForHearts {
     background-color: rgba(255, 255, 255, 0.068);
