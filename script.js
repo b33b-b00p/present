@@ -1,7 +1,6 @@
+/* ********changing mwah! Bg animation******** */
 let buttonBg = document.querySelector('#buttonBg');
-// let mwahHollowOption = 'url(./images/mwah\(hollow_bold\).png)';
 let nextMwahOption = 'hollow';
-// let mwahBoldOption = 'url(./images/mwah\(combined\)\ bold.png)'
 
 function buttonBgChange()
 {
@@ -21,6 +20,7 @@ function buttonBgChange()
 }
 let mwahInterval = setInterval(buttonBgChange, 800);
 
+/* ********transition animations******** */
 let playButton = document.querySelector("#buttonCircle");
 let buttonScreen = document.querySelector("#buttonScreen");
 let catScreen = document.querySelector("#catScreen");
@@ -66,7 +66,6 @@ function showCatScreen()
 function showHeartTransition()
 {
     screenFilledWithHearts.style.display = "block";
-    // setTimeout(hideHeartTransition, 3000);
     setTimeout(playHeartAnimation, 500);
 }
 function hideHeartTransition()
@@ -74,11 +73,9 @@ function hideHeartTransition()
     screenFilledWithHearts.style.display = "none";
 }
 
+/* ********main function, execution******** */
 playButton.addEventListener("click", () => {
     clearInterval(mwahInterval);
     showHeartTransition();
     setTimeout(showCatScreen, 5000);
-    // buttonScreen.style.display = "none";
-    // catScreen.style.display = "flex";
-    // showWhiteTransition();
 });
