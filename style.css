@@ -10,7 +10,7 @@ body {
     background-color: #925ecbd6;
 }
 #cat {
-    width: min(100vw, 1000px);
+    /* width: min(100vw, 1000px); */
     height: 100vh;
     position: absolute;
     margin-left: auto;
